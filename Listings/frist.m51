@@ -1,0 +1,167 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    10/03/2021  17:39:52  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\main.obj TO .\Objects\frist PRINT (.\Listings\frist.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\frist (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0001H     UNIT         _DATA_GROUP_
+            IDATA   0009H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     003AH     UNIT         ?PR?WATER_LAMP?MAIN
+            CODE    083AH     0028H     UNIT         ?PR?WATER_LAMP02?MAIN
+            CODE    0862H     000FH     UNIT         ?PR?_DELAY?MAIN
+            CODE    0871H     000EH     UNIT         ?PR?LED_TWINKLE?MAIN
+            CODE    087FH     000CH     UNIT         ?C_C51STARTUP
+            CODE    088BH     0003H     UNIT         ?PR?MAIN?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\frist (MAIN)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN                  -----    -----
+  +--> ?PR?WATER_LAMP02?MAIN
+
+?PR?WATER_LAMP02?MAIN          0008H    0001H
+  +--> ?PR?_DELAY?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\frist (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/03/2021  17:39:52  PAGE 2
+
+
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  C:0866H         PUBLIC        _delay
+  C:083AH         PUBLIC        water_lamp02
+  D:00B8H         PUBLIC        IP
+  C:0871H         PUBLIC        led_twinkle
+  C:088BH         PUBLIC        main
+  C:0800H         PUBLIC        water_lamp
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  B:00A0H.0       PUBLIC        led1
+  D:00C8H         PUBLIC        T2CON
+  B:00A0H.1       PUBLIC        led2
+  B:00A0H.2       PUBLIC        led3
+  B:00A0H.3       PUBLIC        led4
+  B:00A0H.4       PUBLIC        led5
+  B:00A0H.5       PUBLIC        led6
+  B:00A0H.6       PUBLIC        led7
+  B:00A0H.7       PUBLIC        led8
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  C:088BH         LINE#         23
+  C:088BH         LINE#         24
+  -------         ENDPROC       MAIN
+  -------         PROC          LED_TWINKLE
+  C:0871H         LINE#         28
+  C:0871H         LINE#         29
+  C:0873H         LINE#         30
+  C:0876H         LINE#         31
+  C:0878H         LINE#         32
+  -------         ENDPROC       LED_TWINKLE
+  -------         PROC          WATER_LAMP
+  C:0800H         LINE#         36
+  C:0800H         LINE#         37
+  C:0800H         LINE#         38
+  C:0802H         LINE#         39
+  C:0804H         LINE#         40
+  C:0807H         LINE#         41
+  C:0809H         LINE#         42
+  C:080BH         LINE#         43
+  C:080EH         LINE#         44
+  C:0810H         LINE#         45
+  C:0812H         LINE#         46
+  C:0815H         LINE#         47
+  C:0817H         LINE#         48
+  C:0819H         LINE#         49
+  C:081CH         LINE#         50
+  C:081EH         LINE#         51
+  C:0820H         LINE#         52
+  C:0823H         LINE#         53
+  C:0825H         LINE#         54
+  C:0827H         LINE#         55
+  C:082AH         LINE#         56
+  C:082CH         LINE#         57
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/03/2021  17:39:52  PAGE 3
+
+
+  C:082EH         LINE#         58
+  C:0831H         LINE#         59
+  C:0833H         LINE#         60
+  C:0835H         LINE#         61
+  C:0838H         LINE#         62
+  -------         ENDPROC       WATER_LAMP
+  -------         PROC          WATER_LAMP02
+  -------         DO            
+  D:0008H         SYMBOL        i
+  -------         ENDDO         
+  C:083AH         LINE#         65
+  C:083AH         LINE#         66
+  C:083DH         LINE#         67
+  C:0840H         LINE#         68
+  C:0840H         LINE#         69
+  C:084EH         LINE#         70
+  C:085BH         LINE#         71
+  C:085EH         LINE#         72
+  -------         ENDPROC       WATER_LAMP02
+  C:0862H         SYMBOL        L?0019
+  -------         PROC          L?0018
+  -------         ENDPROC       L?0018
+  C:0862H         SYMBOL        L?0019
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        i
+  C:0866H         LINE#         76
+  C:0866H         LINE#         77
+  C:0870H         LINE#         78
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LED_TWINKLE?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?WATER_LAMP?MAIN
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0082H BYTE ( 6%) *
+******************************************************************************
+
+Program Size: data=10.0 xdata=0 code=145
+LINK/LOCATE RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
